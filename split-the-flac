@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+
+import subprocess
+from pathlib import Path
+
+flacs = list(Path.cwd().glob("*.flac"))
+cues = list(Path.cwd().glob("*.cue"))
+
+if len(flacs) != 1:
+    raise SystemExit(f"Expected exactly one .flac file, found {len(flacs)}")
+
+if len(cues) != 1:
+    raise SystemExit(f"Expected exactly one .cue file, found {len(cues)}")
+
+flac = flacs[0]
+cue = cues[0]
+
+print(f"Splitting {flac} using {cue}...")
+
+subprocess.run(
+    [
+        "shnsplit",
+        "-f", str(cue),
+        "-t", "%n - %t",
+        "-o", "flac",
+        str(flac),
+    ],
+    check=True,
+)
+
+tracks = sorted(
+    p for p in Path.cwd().glob("*.flac")
+    if p != flac
+)
+
+if not tracks:
+    raise SystemExit("shnsplit produced no FLAC files")
+
+print(f"Tagging {len(tracks)} tracks...")
+
+subprocess.run(
+    ["cuetag", str(cue), *map(str, tracks)],
+    check=True,
+)
+
+print("Done.")
