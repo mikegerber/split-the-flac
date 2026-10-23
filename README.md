@@ -1,7 +1,10 @@
 # split-the-flac
 
-Split (and tag) the FLAC file according to the CUE file. It's a simple convenient tool that calls
-`shnsplit` and `cuetag` on the files found in the current working directory.
+Split a single FLAC album image into individual tracks using a CUE sheet, and tag the tracks with
+metadata from that sheet.
+
+It's a simple convenient tool that calls `shnsplit` and `cuetag` on the files found in the current
+working directory.
 
 
 ## Why?
