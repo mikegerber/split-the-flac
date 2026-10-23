@@ -6,7 +6,7 @@ Split (and tag) the FLAC file according to the CUE file. It's a simple convenien
 
 ## Why?
 
-I simply couldn't remember the right options and arguments to `shnplit` and `cuetag`, and wanted
+I simply couldn't remember the right options and arguments to `shnsplit` and `cuetag`, and wanted
 something with a more user-friendly CLI interface. Now I need to remember exactly 0 options and
 arguments.
 
