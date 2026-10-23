@@ -13,7 +13,8 @@ arguments.
 
 ## How to use
 
-If you have `example.flac` and `example.cue` in the current working directory, simply call:
+The script expects to see exactly one FLAC and one CUE file in the working directory. If you have
+`example.flac` and `example.cue` in the current working directory, simply call:
 
 ```
 split-the-flac
