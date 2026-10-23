@@ -10,7 +10,7 @@ working directory.
 ## Why?
 
 I simply couldn't remember the right options and arguments to `shnsplit` and `cuetag`, and wanted
-something with a more user-friendly CLI interface. Now I need to remember exactly 0 options and
+something with a more user-friendly CLI interface. Now I have to remember exactly zero options or
 arguments.
 
 
