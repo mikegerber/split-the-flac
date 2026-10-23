@@ -11,6 +11,25 @@ something with a more user-friendly CLI interface. Now I need to remember exactl
 arguments.
 
 
+## How to install
+
+Install dependencies, e.g. on Ubuntu:
+
+```sh
+sudo apt-get install python3 shntool cuetools flac curl
+```
+
+Download and install `split-the-flac`:
+
+```sh
+curl -fLo split-the-flac \
+  https://raw.githubusercontent.com/mikegerber/split-the-flac/main/split-the-flac
+sudo install -m 755 split-the-flac /usr/local/bin/split-the-flac
+```
+
+You can now run `split-the-flac` from the directory containing your FLAC and CUE files.
+
+
 ## How to use
 
 The script expects to see exactly one FLAC and one CUE file in the working directory. If you have
@@ -21,9 +40,3 @@ split-the-flac
 ```
 
 This yields `01 - some title.flac`, `02 - some other title.flac` etc.
-
-
-## Requirements
-
-- shntool (for `shnsplit`)
-- cuetools (for `cuetag`)
