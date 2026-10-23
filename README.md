@@ -39,4 +39,5 @@ The script expects to see exactly one FLAC and one CUE file in the working direc
 split-the-flac
 ```
 
-This yields `01 - some title.flac`, `02 - some other title.flac` etc.
+This yields `01 - some title.flac`, `02 - some other title.flac` etc. The split tracks are written
+to the current directory. The original FLAC and CUE files are kept unchanged.
