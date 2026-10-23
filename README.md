@@ -4,6 +4,13 @@ Split (and tag) the FLAC file according to the CUE file. It's a simple convenien
 `shnsplit` and `cuetag` on the files found in the current working directory.
 
 
+## Why?
+
+I simply couldn't remember the right options and arguments to `shnplit` and `cuetag`, and wanted
+something with a more user-friendly CLI interface. Now I need to remember exactly 0 options and
+arguments.
+
+
 ## How to use
 
 If you have `example.flac` and `example.cue` in the current working directory, simply call:
